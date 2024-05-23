@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { mensajeconsola } from "../messaging/brows";
 
 const routesMain = Router();
 
-routesMain.get("/", (req, res) => {
-    res.json({"main":"hola mundo"});
-});
+routesMain.get("/", mensajeconsola);
 
 export default routesMain;
